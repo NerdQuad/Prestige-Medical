@@ -1,0 +1,298 @@
+{% extends "index.html" %}
+{% block title %} Prestige Medical Centre - Hospital & Maternity | Home {% endblock %}
+{% block content %}
+ <!-- Full Screen Search Start -->
+ <div class="modal fade" id="searchModal" tabindex="-1">
+    <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content" style="background: rgba(9, 30, 62, .7);">
+            <div class="modal-header border-0">
+                <button type="button" class="btn bg-white btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body d-flex align-items-center justify-content-center">
+                <div class="input-group" style="max-width: 600px;">
+                    <input type="text" class="form-control bg-transparent border-primary p-3" placeholder="Type search keyword">
+                    <button class="btn btn-primary px-4"><i class="bi bi-search"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Full Screen Search End -->
+
+
+<!-- Carousel Start -->
+<div class="container-fluid p-0">
+    <div id="header-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="w-100" src="../static/img/carousel.png" alt="Image">
+                <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                    <div class="p-3" style="max-width: 900px;">
+                        <h5 class="text-white text-uppercase mb-3 animated slideInDown">Keep Yourself Healthy</h5>
+                        <h1 class="display-1 text-white mb-md-4 animated zoomIn">Take The Best Quality Medical Treatment</h1>
+                        <a href="{% url 'appointment' %}" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Appointment</a>
+                        <a href="{% url 'contact' %}" class="btn btn-secondary py-md-3 px-md-5 animated slideInRight">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="w-100" src="../static/img/carousell.jpg" alt="Image">
+                <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                    <div class="p-3" style="max-width: 900px;">
+                        <h5 class="text-white text-uppercase mb-3 animated slideInDown">Keep Yourself Healthy</h5>
+                        <h1 class="display-1 text-white mb-md-4 animated zoomIn">Take The Best Quality Medical Treatment</h1>
+                        <a href="{% url 'appointment' %}" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Appointment</a>
+                        <a href="{% url 'contact' %}" class="btn btn-secondary py-md-3 px-md-5 animated slideInRight">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#header-carousel"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</div>
+<!-- Carousel End -->
+
+
+<!-- Banner Start -->
+<div class="container-fluid banner mb-5">
+    <div class="container">
+        <div class="row gx-0">
+            <div class="col-lg-4 wow zoomIn" data-wow-delay="0.1s">
+                <div class="bg-primary d-flex flex-column p-5" style="height: 300px;">
+                    <h3 class="text-white mb-3">Opening Hours</h3>
+                    <div class="d-flex justify-content-between text-white mb-3">
+                        <h6 class="text-white mb-0">Mon - Fri</h6>
+                        <p class="mb-0">24 Hours</p>
+                    </div>
+                    <div class="d-flex justify-content-between text-white mb-3">
+                        <h6 class="text-white mb-0">Saturday</h6>
+                        <p class="mb-0"> 24 Hours</p>
+                    </div>
+                    <div class="d-flex justify-content-between text-white mb-3">
+                        <h6 class="text-white mb-0">Sunday</h6>
+                        <p class="mb-0">24 Hours</p>
+                    </div>
+                    <a class="btn btn-light" href="{% url 'appointment' %}">Appointment</a>
+                </div>
+            </div>
+            <div class="col-lg-4 wow zoomIn" data-wow-delay="0.3s">
+                <div class="bg-dark d-flex flex-column p-5" style="height: 300px;">
+                    <h3 class="text-white mb-3">Search A Doctor</h3>
+                    <div class="date mb-3" id="date" data-target-input="nearest">
+                        <input type="text" class="form-control bg-light border-0 datetimepicker-input"
+                            placeholder="Appointment Date" data-target="#date" data-toggle="datetimepicker" style="height: 40px;">
+                    </div>
+                    <select class="form-select bg-light border-0 mb-3" style="height: 40px;">
+                        <option selected>Select A Service</option>
+                            <option value="1">Antenatal</option>
+                            <option value="2">Family Wellness Package</option>
+                            <option value="3">Elderly Care & Home Services</option>
+                            <option value="4">Medical Check-up</option>
+                            <option value="5">Medical Consultation</option>
+                    </select>
+                    <a class="btn btn-light" href="">Search Doctor</a>
+                </div>
+            </div>
+            <div class="col-lg-4 wow zoomIn" data-wow-delay="0.6s">
+                <div class="bg-secondary d-flex flex-column p-5" style="height: 300px;">
+                    <h3 class="text-white mb-3">Make Appointment</h3>
+                    <p class="text-white">Please select your appointment preferences to add an event to your calender.</p>
+                    <h2 class="text-white mb-0">+2348148582544</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Banner Start -->
+
+
+<!-- About Start -->
+<div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+    <div class="container">
+        <div class="row g-5">
+            <div class="col-lg-7">
+                <div class="section-title mb-4">
+                    <h5 class="position-relative d-inline-block text-primary text-uppercase">About Us</h5>
+                    <h1 class="display-5 mb-0">The Best Medical Centre That You Can Trust</h1>
+                </div>
+                <h4 class="text-body fst-italic mb-4"> At Prestige Medical Centre, we provide a wide range of professional medical & maternity services.</h4>
+                <p class="mb-4">Our staff are dedicated and committed to providing excellent healthcare with innovative techniques.</p>
+                <div class="row g-3">
+                    <div class="col-sm-6 wow zoomIn" data-wow-delay="0.3s">
+                        <h5 class="mb-3"><i class="fa fa-check-circle text-primary me-3"></i>Modern Facilities</h5>
+                        <h5 class="mb-3"><i class="fa fa-check-circle text-primary me-3"></i>Professional Staff</h5>
+                    </div>
+                    <div class="col-sm-6 wow zoomIn" data-wow-delay="0.6s">
+                        <h5 class="mb-3"><i class="fa fa-check-circle text-primary me-3"></i>Emergency Open</h5>
+                        <h5 class="mb-3"><i class="fa fa-check-circle text-primary me-3"></i>Affordable Healthcare</h5>
+                    </div>
+                </div>
+                <a href="{% url 'appointment' %}" class="btn btn-primary py-3 px-5 mt-4 wow zoomIn" data-wow-delay="0.6s">Make Appointment</a>
+            </div>
+            <div class="col-lg-5" style="min-height: 500px;">
+                <div class="position-relative h-100">
+                    <img class="position-absolute w-100 h-100 rounded wow zoomIn" data-wow-delay="0.9s" src="../static/img/carousell.jpg" style="object-fit: cover;">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- About End -->
+
+
+<!-- Appointment Start -->
+<div class="container-fluid bg-primary bg-appointment my-5 wow fadeInUp" data-wow-delay="0.1s">
+    <div class="container">
+        <div class="row gx-5">
+            <div class="col-lg-6 py-5">
+                <div class="py-5">
+                    <h1 class="display-5 text-white mb-4">We are winning medical clinic you can trust</h1>
+                    <p class="text-white mb-0">Our deep concern for our patient's dignity has put us in the spotlight such that the patient traffic on a regular basis is second to none with an average of 500 out-patients visiting the facility daily. This is because of our patient-centred healthcare services being built around the need and desire to exceed patients' expectations and provide them with quality service.</p>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="appointment-form h-100 d-flex flex-column justify-content-center text-center p-5 wow zoomIn" data-wow-delay="0.6s">
+                    <h1 class="text-white mb-4">Make Appointment</h1>
+                    <form>
+                        <div class="row g-3">
+                            <div class="col-12 col-sm-6">
+                                <select class="form-select bg-light border-0" style="height: 55px;">
+                                    <option selected>Select A Service</option>
+                                    <option value="1">Antenatal</option>
+                                    <option value="2">Family Wellness Package</option>
+                                    <option value="3">Elderly Care & Home Services</option>
+                                    <option value="4">Medical Check-up</option>
+                                    <option value="5">Medical Consultation</option>
+                                </select>
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <select class="form-select bg-light border-0" style="height: 55px;">
+                                    <option selected>Select Doctor</option>
+                                    <option value="1">Doctor 1</option>
+                                    <option value="2">Doctor 2</option>
+                                    <option value="3">Doctor 3</option>
+                                </select>
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <input type="text" class="form-control bg-light border-0" placeholder="Your Name" style="height: 55px;">
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <input type="email" class="form-control bg-light border-0" placeholder="Your Email" style="height: 55px;">
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <div class="date" id="date1" data-target-input="nearest">
+                                    <input type="text"
+                                        class="form-control bg-light border-0 datetimepicker-input"
+                                        placeholder="Appointment Date" data-target="#date1" data-toggle="datetimepicker" style="height: 55px;">
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <div class="time" id="time1" data-target-input="nearest">
+                                    <input type="text"
+                                        class="form-control bg-light border-0 datetimepicker-input"
+                                        placeholder="Appointment Time" data-target="#time1" data-toggle="datetimepicker" style="height: 55px;">
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <button class="btn btn-dark w-100 py-3" type="submit">Make Appointment</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Appointment End -->
+
+<!-- Team Start -->
+<div class="container-fluid py-5">
+    <div class="container">
+        <div class="row g-5">
+            <div class="col-lg-4 wow slideInUp" data-wow-delay="0.1s">
+                <div class="section-title bg-light rounded h-100 p-5">
+                    <h5 class="position-relative d-inline-block text-primary text-uppercase">Our Medical Experts</h5>
+                    <h1 class="display-6 mb-4">Meet Our Certified & Experienced Medical Practitioners </h1>
+                    <a href="{% url 'appointment' %}" class="btn btn-primary py-3 px-5">Appointment</a>
+                </div>
+            </div>
+            <div class="col-lg-4 wow slideInUp" data-wow-delay="0.3s">
+                <div class="team-item">
+                    <div class="position-relative rounded-top" style="z-index: 1;">
+                        <img class="img-fluid rounded-top w-100" src="../static/img/team11.jpg" alt="">
+                        <div class="position-absolute top-100 start-50 translate-middle bg-light rounded p-2 d-flex">
+                        </div>
+                    </div>
+                    <div class="team-text position-relative bg-light text-center rounded-bottom p-4 pt-5">
+                        <h4 class="mb-2">Dr. Funsho Oladipo</h4>
+                        <p class="text-primary mb-0">Physician</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 wow slideInUp" data-wow-delay="0.6s">
+                <div class="team-item">
+                    <div class="position-relative rounded-top" style="z-index: 1;">
+                        <img class="img-fluid rounded-top w-100" src="../static/img/team44.jpg" alt="">
+                        <div class="position-absolute top-100 start-50 translate-middle bg-light rounded p-2 d-flex">
+                        </div>
+                    </div>
+                    <div class="team-text position-relative bg-light text-center rounded-bottom p-4 pt-5">
+                        <h4 class="mb-2"> Dr. Tolulope Fadipe
+                        </h4>
+                        <p class="text-primary mb-0">Medical Training</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 wow slideInUp" data-wow-delay="0.1s">
+                <div class="team-item">
+                    <div class="position-relative rounded-top" style="z-index: 1;">
+                        <img class="img-fluid rounded-top w-100" src="../static/img/team33.jpg" alt="">
+                        <div class="position-absolute top-100 start-50 translate-middle bg-light rounded p-2 d-flex">
+                        </div>
+                    </div>
+                    <div class="team-text position-relative bg-light text-center rounded-bottom p-4 pt-5">
+                        <h4 class="mb-2">Pharm. Adebola Onaduja</h4>
+                        <p class="text-primary mb-0">Pharmacist</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 wow slideInUp" data-wow-delay="0.3s">
+                <div class="team-item">
+                    <div class="position-relative rounded-top" style="z-index: 1;">
+                        <img class="img-fluid rounded-top w-100" src="../static/img/team22.jpg" alt="">
+                        <div class="position-absolute top-100 start-50 translate-middle bg-light rounded p-2 d-flex">
+                        </div>
+                    </div>
+                    <div class="team-text position-relative bg-light text-center rounded-bottom p-4 pt-5">
+                        <h4 class="mb-2">Dr. Soji Osunsedo</h4>
+                        <p class="text-primary mb-0">Physician</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 wow slideInUp" data-wow-delay="0.6s">
+                <div class="team-item">
+                    <div class="position-relative rounded-top" style="z-index: 1;">
+                        <img class="img-fluid rounded-top w-100" src="../static/img/team55.jpg" alt="">
+                    </div>
+                    <div class="team-text position-relative bg-light text-center rounded-bottom p-4 pt-5">
+                        <h4 class="mb-2">Dr. Halima Aliu-Ayo</h4>
+                        <p class="text-primary mb-0">Gynaecologist</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Team End -->
+
+
+{% endblock %}
