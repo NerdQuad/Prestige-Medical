@@ -4,4 +4,7 @@ Live At - **https://www.prestigemedicalcentre.com.ng**
 
 ## Installation Guide 
 activate virtual environment: .env\Scripts\activate </br>
-cd prestige
+cd prestige </br>
+run locally: python manage.py runserver </br>
+
+
